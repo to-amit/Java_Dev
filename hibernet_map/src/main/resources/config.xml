@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <!-- Database connection settings -->
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/myhiber</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Password</property>
+
+        <!-- Specify dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Specify the database schema to be used (optional) -->
+        <!-- <property name="hibernate.default_schema">your_schema</property> -->
+
+        <!-- Echo all executed SQL to stdout (optional) -->
+        <property name="show_sql">true</property>
+
+        <!-- Automatically create/update database tables (optional) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Specify annotated entity classes -->
+        <mapping class="org.example.Questions"/>
+        <mapping class="org.example.Answers"/>
+
+
+    </session-factory>
+</hibernate-configuration>
