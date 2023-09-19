@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>hibernate_one_to_many</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!-- Hibernate Core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.5.7.Final</version> <!-- Use the latest version available -->
+        </dependency>
+
+        <!-- Hibernate EntityManager (if needed) -->
+        <!--        <dependency>-->
+        <!--            <groupId>org.hibernate</groupId>-->
+        <!--            <artifactId>hibernate-entitymanager</artifactId>-->
+        <!--            <version>5.5.7.Final</version> &lt;!&ndash; Use the same version as hibernate-core &ndash;&gt;-->
+        <!--        </dependency>-->
+
+        <!-- Hibernate Validator (if needed) -->
+        <!--        <dependency>-->
+        <!--            <groupId>org.hibernate.validator</groupId>-->
+        <!--            <artifactId>hibernate-validator</artifactId>-->
+        <!--            <version>7.0.2.Final</version> &lt;!&ndash; Use the latest version available &ndash;&gt;-->
+        <!--        </dependency>-->
+
+        <!-- JDBC Driver for your Database (e.g., MySQL) -->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+
+        <!-- JPA API (if using JPA with Hibernate) -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version> <!-- Use the version compatible with your Hibernate version -->
+        </dependency>
+    </dependencies>
+
+</project>
