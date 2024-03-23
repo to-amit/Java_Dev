@@ -1,6 +1,8 @@
 package com.techie.jobapp.company;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.techie.jobapp.job.Job;
+import com.techie.jobapp.review.Review;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -15,10 +17,12 @@ public class Company {
     private String name;
 
     private String description;
-    @OneToMany
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
     private List<Job> jobs;
 
-    @OneToMany
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
     public Company() {
